@@ -1,0 +1,156 @@
+/* Neon-themed Button Styles - Pure CSS */
+.btn {
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  gap: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid transparent;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.btn:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: white;
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.6), 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--neon-blue);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.btn-danger {
+  background: var(--danger-gradient);
+  color: white;
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.4);
+  text-shadow: 0 0 10px rgba(255, 0, 110, 0.8);
+}
+
+.btn-danger:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.6), 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--neon-pink);
+}
+
+.btn-secondary {
+  background: var(--dark-surface);
+  color: var(--neon-blue);
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+  text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--dark-surface-light);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.4), 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: var(--neon-blue);
+}
+
+.btn-success {
+  background: var(--success-gradient);
+  color: var(--dark-bg-primary);
+  border-color: var(--neon-green);
+  box-shadow: 0 0 20px rgba(6, 255, 165, 0.4);
+  text-shadow: 0 0 10px rgba(6, 255, 165, 0.8);
+}
+
+.btn-success:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 30px rgba(6, 255, 165, 0.6), 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--neon-green);
+}
+
+.btn-info {
+  background: var(--accent-gradient);
+  color: white;
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 20px rgba(131, 56, 236, 0.4);
+  text-shadow: 0 0 10px rgba(131, 56, 236, 0.8);
+}
+
+.btn-info:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 30px rgba(131, 56, 236, 0.6), 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--neon-purple);
+}
+
+.btn-warning {
+  background: var(--warning-gradient);
+  color: var(--dark-bg-primary);
+  border-color: var(--neon-orange);
+  box-shadow: 0 0 20px rgba(251, 133, 0, 0.4);
+  text-shadow: 0 0 10px rgba(251, 133, 0, 0.8);
+}
+
+.btn-warning:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 30px rgba(251, 133, 0, 0.6), 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--neon-orange);
+}
+
+.btn-sm {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  border-radius: 12px;
+}
+
+/* Special neon button variant */
+.btn-neon {
+  background: transparent;
+  color: var(--neon-blue);
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+  text-shadow: 0 0 10px var(--neon-blue);
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+.btn-neon:hover:not(:disabled) {
+  background: rgba(0, 212, 255, 0.1);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.6), 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: none;
+  border-color: var(--neon-blue);
+}
