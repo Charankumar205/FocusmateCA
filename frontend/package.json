@@ -2,6 +2,7 @@
   "name": "focus-monitor-frontend",
   "version": "1.0.0",
   "private": true,
+  "homepage": "/",
   "dependencies": {
     "extend": "^3.0.2",
     "react": "^18.2.0",
@@ -31,6 +32,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://localhost:5000"
+  }
 }
+
