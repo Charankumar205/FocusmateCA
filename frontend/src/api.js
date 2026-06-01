@@ -1,7 +1,9 @@
 // API wrapper functions for backend communication
 
-const API_BASE_URL = process.env.NODE_ENV === "production" ? "http://localhost:3000/api" : "/api"
-
+const API_BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://focusmate-backend-0bz3.onrender.com/api"
+    : "/api"
 // Helper function to get auth headers
 const getAuthHeaders = () => {
   const token = localStorage.getItem("token")
